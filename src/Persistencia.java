@@ -286,10 +286,11 @@ public class Persistencia {
         }
     }
     
-        public void alterarImovel(String codigo, Terreno novo) {        
+        public void alterarImovel(String codigo, String situacao) {        
         try {
             if (codigo != null) {
-                String update = "UPDATE imovel SET "+cliente+" WHERE codconsulta = '"+novo.getCodigo()+"'";
+                String cliente = "SITUACAO = '"+situacao+"'";
+                String update = "UPDATE imovel SET "+cliente+" WHERE CODIGO = '"+situacao+"'";
                 Statement stmt = con.createStatement();
                 stmt.executeUpdate(update);
             }
