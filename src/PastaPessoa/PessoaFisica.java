@@ -2,12 +2,12 @@ package PastaPessoa;
 
 
 public class PessoaFisica extends Pessoa{
-    private long cpf;
-    public long getCpf() {
+    private String cpf;
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(long cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
     

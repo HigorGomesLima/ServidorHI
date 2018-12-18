@@ -1,3 +1,4 @@
+import PastaPessoa.PessoaFisica;
 import java.io.Serializable;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -20,9 +21,14 @@ public class RmiRegistro {
             rmiRegistry.bind("RmiService", rmiService);
             //Agenda.getObjeto();
             System.out.println("Servidor On-line");
-            
+            PessoaFisica f = new PessoaFisica();
+            f.setNome("a");
+            f.setCpf("88888888888");
+            f.setTipo("FISICA");
+            f.setEmail("teste");
+            srv.cadastrarPessoa(f);
         } catch (Exception ex) {
-            ex.printStackTrace();
+            System.out.println(ex.getMessage());
         }
         /*
         final Timer timer = new Timer();

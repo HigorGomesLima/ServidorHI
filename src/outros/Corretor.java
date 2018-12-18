@@ -4,12 +4,14 @@ import java.io.Serializable;
 
 public class Corretor implements Serializable{
     
+    protected String tipo;
+    protected String senha;
     protected String cpf;
     protected String nome;
     protected String endereco;
     protected String email;
     protected String bairro;
-    protected long cep;
+    protected String cep;
 
     public String getCpf() {
         return cpf;
@@ -51,11 +53,27 @@ public class Corretor implements Serializable{
         this.bairro = bairro;
     }
 
-    public long getCep() {
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public String getCep() {
         return cep;
     }
 
-    public void setCep(long cep) {
+    public void setCep(String cep) {
         this.cep = cep;
     }
 

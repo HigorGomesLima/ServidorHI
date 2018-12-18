@@ -9,11 +9,12 @@ public class Imovel implements Serializable{
     protected String endereco;
     protected String bairro;
     protected String cidade;
-    protected long cep;
+    protected String cep;
     protected float areaTotal;
     protected double valor;
     protected  Situacao situacaoatual;
-    private Pessoa dono;
+    protected Pessoa dono;
+    protected String tipo;
     
     public String getEndereco() {
         return endereco;
@@ -39,11 +40,11 @@ public class Imovel implements Serializable{
         this.cidade = cidade;
     }
 
-    public long getCep() {
+    public String getCep() {
         return cep;
     }
 
-    public void setCep(long cep) {
+    public void setCep(String cep) {
         this.cep = cep;
     }
 
@@ -91,6 +92,14 @@ public class Imovel implements Serializable{
      */
     public void setDono(Pessoa dono) {
         this.dono = dono;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
     
 }

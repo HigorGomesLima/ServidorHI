@@ -1,13 +1,13 @@
 package PastaPessoa;
 
-public class PessoaJuridica {
+public class PessoaJuridica extends Pessoa{
 
-    public long getCnpj() {
+    public String getCnpj() {
         return cnpj;
     }
 
-    public void setCnpj(long cnpj) {
+    public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
     }
-    protected long cnpj;
+    protected String cnpj;
 }
